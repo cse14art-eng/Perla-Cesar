@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Historia | Perla & César</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body class="album-body">
+
+    <header class="album-header">
+        <a href="/" class="back-link">← Volver al inicio</a>
+        <h1>Nuestra Historia en Imágenes</h1>
+        <p class="subtitle">Cada momento es un tesoro que guardamos con amor.</p>
+    </header>
+
+    <main class="gallery-container">
+        <!-- Foto 1 -->
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='foto1.jpg') }}" alt="Momento 1">
+            <div class="overlay"><span>El Comienzo</span></div>
+        </div>
+        <!-- Foto 2 -->
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='foto2.jpg') }}" alt="Momento 2">
+            <div class="overlay"><span>Primer Viaje</span></div>
+        </div>
+        <!-- Foto 3 -->
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='foto3.jpg') }}" alt="Momento 3">
+            <div class="overlay"><span>Risas</span></div>
+        </div>
+        <!-- Foto 4 -->
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='foto4.jpg') }}" alt="Momento 4">
+            <div class="overlay"><span>Nuestra Cita</span></div>
+        </div>
+        <!-- Foto 5 -->
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='foto5.jpg') }}" alt="Momento 5">
+            <div class="overlay"><span>Aventuras</span></div>
+        </div>
+        <!-- Foto 6 -->
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='foto6.jpg') }}" alt="Momento 6">
+            <div class="overlay"><span>Para Siempre</span></div>
+        </div>
+    </main>
+
+</body>
+</html>

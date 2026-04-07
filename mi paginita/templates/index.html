@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perla & César | Exclusive Branding</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegación Elegante -->
+    <nav class="navbar">
+        <div class="logo">PERLA & CÉSAR</div>
+        <div class="nav-actions">
+            <a href="#register" class="btn-outline">Registrarse</a>
+            <a href="mailto:info@perlaycesar.com" class="btn-email">📧 Contactar</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{{ url_for('static', filename='hero-image.jpg') }}');">
+        <div class="hero-content">
+            <h1>Excelencia que trasciende.</h1>
+            <p>Diseño, consultoría y visión de vanguardia.</p>
+            <div class="hero-btns">
+                <a href="#register" class="btn-filled">Únete a la lista</a>
+                <a href="#about" class="btn-text">Conocer más ↓</a>
+            </div>
+        </div>
+    </header>
+
+<!-- Nuevo botón de Historia de Amor -->
+<div class="story-container">
+    <a href="/historia" target="_blank" class="btn-story">Asi fue nuestra historia de amor</a>
+</div>
+
+
+    <!-- Sección de Registro -->
+    <section id="register" class="register-section">
+        <div class="container">
+            <h2>Acceso Exclusivo</h2>
+            <p>Regístrate para recibir actualizaciones y contenido premium.</p>
+            <form class="reg-form">
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <button type="submit" class="btn-filled">Crear Cuenta</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
