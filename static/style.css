@@ -237,48 +237,57 @@ body {
     }
 }
 
-/* Contenedor Flotante */
+/* Contenedor de iconos flotantes */
 .social-floating {
     position: fixed;
-    bottom: 30px;
+    bottom: 20px;
     right: 20px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    z-index: 9999;
+    gap: 12px;
+    z-index: 10000; /* Para que siempre esté por encima de todo */
 }
 
-/* Estilo Individual de Iconos */
 .social-icon {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
+    background-color: #ffffff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    background: white; /* Fondo blanco para que resalten */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .social-icon img {
-    width: 30px;
-    height: 30px;
+    width: 35px; /* Tamaño del logo dentro del círculo */
+    height: 35px;
 }
 
-/* Efectos de Hover */
+/* Efectos al pasar el mouse */
 .social-icon:hover {
-    transform: scale(1.1) translateX(-5px);
+    transform: scale(1.1);
 }
 
-.whatsapp:hover { background-color: #25d366; }
-.instagram:hover { background-color: #e4405f; }
-.youtube:hover { background-color: #ff0000; }
+.whatsapp:hover { background-color: #25D366; }
+.instagram:hover { background-color: #E1306C; }
+.youtube:hover { background-color: #FF0000; }
 
-/* Ajuste para móviles */
-@media (max-width: 768px) {
+/* Ajuste para teléfonos */
+@media (max-width: 480px) {
+    .social-floating {
+        bottom: 15px;
+        right: 15px;
+        gap: 10px;
+    }
     .social-icon {
-        width: 45px;
-        height: 45px;
+        width: 48px;
+        height: 48px;
+    }
+    .social-icon img {
+        width: 28px;
+        height: 28px;
     }
 }
