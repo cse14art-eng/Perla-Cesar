@@ -88,28 +88,70 @@ body {
 }
 
 .story-container {
-    margin-top: 30px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
 }
 
-.btn-story {
-    display: inline-block;
-    padding: 12px 30px;
-    border: 2px solid var(--accent-gold);
-    color: var(--white);
+.btn-story-premium {
+    position: relative;
+    padding: 18px 45px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 500;
+    text-transform: uppercase;
     letter-spacing: 2px;
-    background: rgba(197, 160, 89, 0.2); /* Un toque dorado transparente */
-    transition: all 0.4s ease;
-    border-radius: 50px; /* Bordes redondeados para un look romántico/profesional */
+    
+    /* Gradiente animado dorado/rosado */
+    background: linear-gradient(45deg, #c5a059, #e1b382, #c5a059);
+    background-size: 200% auto;
+    border-radius: 50px;
+    
+    /* Sombra de brillo (Glow) */
+    box-shadow: 0 10px 25px rgba(197, 160, 89, 0.4);
+    transition: all 0.5s ease;
+    animation: gradientShift 3s linear infinite;
+    border: none;
+    cursor: pointer;
 }
 
-.btn-story:hover {
-    background: var(--accent-gold);
-    color: var(--bg-dark);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4);
+/* Animación del fondo del botón */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
+
+/* Efecto al pasar el mouse */
+.btn-story-premium:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(197, 160, 89, 0.6);
+    letter-spacing: 3px;
+}
+
+/* Destellos a los lados */
+.sparkle {
+    margin: 0 10px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    animation: blink 1.5s infinite alternate;
+}
+
+@keyframes blink {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .btn-story-premium {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+}
+
 /* Estilos para el Álbum */
 .album-body {
     background-color: #0f0f0f; /* Negro profundo */
